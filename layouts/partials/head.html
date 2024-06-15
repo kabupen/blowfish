@@ -146,4 +146,22 @@
   </script>
   {{ end }}
   {{ end }}
+
+  <!-- KaTeX Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/contrib/auto-render.min.js"></script>
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.querySelector('.article-content'), {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+            { left: "\\(", right: "\\)", display: false },
+            { left: "\\[", right: "\\]", display: true }
+          ],
+          ignoredClasses: ["gist"]
+        });
+      });
+  </script>
 </head>
